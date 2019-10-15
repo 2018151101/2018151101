@@ -1,0 +1,84 @@
+body{
+	background:url(universe.jpg) no-repeat 0 0;
+	background-size:cover;
+}
+
+.sun{
+	background:url(sun.jpg) repeat-x 0 0;
+	background-size: 200%;
+	background-position:-20px 0;
+  	height:320px;
+	width:320px;
+	position:absolute;
+	left:35%;
+	top:25%;
+	z-index:150;
+	border:0.5px;
+	border-radius: 100%;
+	box-shadow: 0px 0px 10px 5px #000;
+	/* to create the illution of rotation, we must have a rectangular image 
+	and fix background position  and move the background postition using animation
+	*/
+	animation: 
+    	rotate_sun 50s linear infinite;
+	animation-direction:normal;
+ }
+
+.earth{
+	background:url(earth.jpg) repeat-x 0 0;
+	background-size:200%;
+	height:100px;
+	width:100px;
+	border-radius: 100%;
+	box-shadow: 0px 0px 5px 2px #000;
+	position:relative;
+	margin:-5px 0 0 -5px;
+	z-index:250;
+			
+	animation: 
+    	/* nudge 20s linear infinite , */
+		revolve 25s linear infinite ;
+	    animation-direction:normal;
+}
+
+
+
+@keyframes revolve{
+  0%, 100% {
+    transform: translate(0px, 0px);}
+ 
+  25% {
+    transform: translate(400px,-200px);
+	z-index:0;}
+  50% {
+    transform: translate(0px, 0px);}
+  
+  75% {
+    transform: translate(-400px, 200px);}
+}
+
+
+
+@keyframes nudge {
+	0%{background-position: 0 0;}
+	100%{background-position: -1639px 0;}
+}
+@keyframes rotate_sun {
+	0%{background-position: 0 0;}
+	100%{background-position: -1000px 0;}
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+	/*The flex CSS property is a shorthand property specifying 
+	the ability of a flex item to alter its dimensions to fill available space. 
+	Flex items can be stretched to use available space proportional to their flex grow factor 
+	or their flex shrink factor to prevent overflow.*/
+  display: flex;
+  /* place all the solarsystem items in center */
+  align-items: center;
+  justify-content: center;
+}
