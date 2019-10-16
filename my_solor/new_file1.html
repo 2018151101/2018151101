@@ -1,0 +1,222 @@
+
+<html>
+    <head><meta name="generator" content="Hexo 3.9.0">
+		<style>
+			/* CSS Reset */
+			
+			* {
+			  -moz-box-sizing: border-box;
+			  box-sizing: border-box;
+			  box-sizing: border-box;
+			}
+			
+			/* Background */
+			/* import Google Siyuan Font Library*/
+			@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+			body {
+			  font-size: 10px;
+			  font-family: 'Open Sans', sans-serif;
+			  font-weight: 300;
+			  background-color: #08090A;
+			}
+			
+			#universe {
+			  z-index: 1;
+			  position: absolute;
+			  overflow: hidden;
+			  width: 100%;
+			  height: 100%;
+			  background-position: center 40%;
+			  background-repeat: no-repeat;
+			  background-size: cover; 
+			}
+			  
+			#galaxy {
+			  position: relative;
+			  width: 100%;
+			  height: 100%;
+			  transform: rotateX(75deg);
+			  transform-style: preserve-3d;
+			}
+			
+			#sun, .planet {
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  width: 1em;
+			  height: 1em;
+			  margin-top: -0.5em;
+			  margin-left: -0.5em;
+			  border-radius: 50%;
+			  transform-style: preserve-3d;
+			}
+			
+			#sun {
+			  background-color: #FB7209;
+			  background-repeat: no-repeat;
+			  background-size: cover;
+			  box-shadow: 0 0 60px rgba(255, 160, 60, 0.4); 
+			  transform: rotateX(-75deg);
+			}
+			
+			.pos {
+			  position: absolute;
+			  transform-style: preserve-3d;
+			  animation-name: invert;
+			  animation-iteration-count: infinite;
+			  animation-timing-function: linear;
+			}
+			
+			.planet {
+			  background-color: #202020;
+			  background-repeat: no-repeat;
+			  background-size: cover;
+			  animation-iteration-count: infinite;
+			  animation-timing-function: linear;
+			}
+			
+			.orbit {
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  border: 1px solid rgba(255, 255, 255, 0.2);
+			  border-radius: 50%;
+			  animation-name: orbit;
+			  animation-iteration-count: infinite;
+			  animation-timing-function: linear; 
+			  transform-style: preserve-3d;
+			}
+			
+			/* Animations */
+			@keyframes orbit {
+			  0%   { transform: rotateZ(0deg); }
+			  100% { transform: rotateZ(-360deg); } 
+			}
+			
+			@keyframes invert {
+			  0%   { transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg); }
+			  100% { transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); } 
+			}
+			
+			/* Orbit sizes */
+			#mercury.orbit {
+			  width: 12em;
+			  height: 12em;
+			  margin-top: -6em;
+			  margin-left: -6em; 
+			}
+			#venus.orbit {
+			  width: 15em;
+			  height: 15em;
+			  margin-top: -6em;
+			  margin-left: -6em; 
+			}
+			/* Planet starting positions */
+			#mercury .pos {
+			  left: 50%;
+			  top: -1px; 
+			  border: solid 3px red;
+			} 
+			#venus .pos {
+			  left: 45%;
+			  top: -1px; 
+			  border: solid 3px red;
+			} 
+			/* Planet animation durations */
+			#mercury.orbit, #mercury .pos {
+			  animation-duration: 2.89016s;
+			}
+			 #venus.orbit, #venus .pos {
+			   animation-duration: 5.41243s;
+			 } 
+			/* Planet sizes */
+			#sun {
+			    font-size: 24em;
+			}
+			#mercury {
+			    font-size: 4em;
+			}
+			#venus {
+				font-size: 5em;
+			}
+			/* Planet shadow animations */
+			#mercury .planet {
+			  animation-name: shadow-mercury ,nudeg;
+			  animation-duration: 2.89016s; }
+			#venus .planet {
+			  animation-name: shadow-mercury ,nudeg;
+			  animation-duration: 5.41243s; }
+			@keyframes shadow-mercury {
+			  0% {
+			    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+			    /* TOP */ }
+			
+			  25% {
+			    box-shadow: inset 16px 0 8px rgba(0, 0, 0, 0.5);
+			    /* LEFT */ }
+			
+			  50% {
+			    box-shadow: inset 40px -20px 16px rgba(0, 0, 0, 0.5);
+			    /* BOTTOM */ }
+			
+			  50.01% {
+			    box-shadow: inset -40px -20px 16px rgba(0, 0, 0, 0.5);
+			    /* BOTTOM */ }
+			
+			  75% {
+			    box-shadow: inset -16px 0 8px rgba(0, 0, 0, 0.5);
+			    /* RIGHT */ }
+			    
+			  100% {
+			    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+			    /* TOP */ }    
+			}
+			
+			
+			
+			/* images */
+			
+			#sun {
+			background-image: url(../my_solor/sun.jpg);
+			}
+			
+			.planet {
+           background-image: url(../my_solor/Mercury_1waterplanet.jpg);
+           }
+		   #venus .planet{
+			   background-image: url(venus_2jinplanet.jpg);
+		   }
+            #universe {
+          background-color: #08090A;
+			}  
+		   /* rotate by themself */
+		   @keyframes nudge {
+		   	0%{background-position: 0 0;}
+		   	100%{background-position: -1639px 0px;}
+		   }
+		</style>
+    </head>
+	
+  <body>
+    
+    <div id="universe">
+      <div id="galaxy">
+        
+        <div id="sun">
+        </div>
+        
+        <div id="mercury" class="orbit">
+            <div class="pos"><div class="planet"></div></div>
+        </div>
+        <div id="venus" class="orbit">
+			<div class="pos">
+				<div class="planet"></div>
+			</div>
+		</div>
+      </div>
+    </div>
+   
+  </body>
+</html>  
+
+

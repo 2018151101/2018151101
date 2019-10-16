@@ -1,0 +1,437 @@
+body {
+  font-size: 10px;
+  font-family: arial;
+  font-weight: 300;
+  background-color: #08090A;
+}
+p{
+	color:#FFF;
+	font-family: "arial, helvetica, sans-serif";
+    position:absolute;
+	top:100px;
+	left:445px;
+	position: absolute;
+	font-size: 20px;
+	transform: rotateX(-75deg);
+}
+#universe {
+	z-index: 1;
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	background-position: center 40%;
+	background-repeat: no-repeat;
+	background-size: cover; 
+}
+			  
+/* .solarsys*/
+
+.solarsys{
+  position: relative;
+  width: 100%;
+  height: 100%; 
+ transform: rotateX(75deg);
+  transform-style: preserve-3d;
+}
+/*Sun*/
+.sun {
+  left:357px;
+  top:357px;
+  height: 90px;
+  width: 90px;
+ 
+  background:url(sun.jpg) repeat-x 0 0;
+   background-size:cover;
+  border:0.5px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgb(248,107,35) inset,
+   -5px -5px 10px rgb(248,107,35) inset, 
+   2px -2px 10px rgb(248,107,35) ,
+	-2px 2px 10px rgb(248,107,35) ; 
+  z-index: 100px;
+  position: absolute;
+  margin: 0;
+  transform-style: preserve-3d;
+  transform: rotatex(-75deg);
+   
+}
+
+/*meicury*/
+.mercury {
+  left:337.5px;
+  top:395px;
+  height: 10px;
+  width: 10px;
+  background :url(Mercury_1waterplanet.jpg) repeat-x 0 0;
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: .5px .5px 1.0px  #FFFFE0,
+   -.5px -.5px 1.0px #FFFFE0 , 
+   .2px -.2px 1.0px #FFFFE0 ,
+  	-.2px .2px 1.0px #FFFFE0 ;
+ 
+  transform-origin: 62.5px 5px;
+  transform-style: preserve-3d;
+  z-index: 200;
+  
+  animation: 
+   rotate 1.5s infinite linear;
+  
+}
+
+/*mercury orbit*/
+.mercuryOrbit {
+  left:342.5px;
+  top:342.5px;
+  height: 115px;
+  width: 115px;
+  background-color: transparent;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: gray;
+  position: absolute;
+  border-width: 1px;
+  margin: 0px;
+  padding: 0px;
+  transform-style: preserve-3d;
+  
+}
+
+/*venus*/
+.venus {
+  left:309px;
+  top:389px;
+  height: 22px;
+  width: 22px;
+  z-index: 200px;
+  background: url(venus_2jinplanet.jpg) repeat 0 0;
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  
+ box-shadow:-1px 1px 5px rgba(256,256,256,0.3)inset,
+ -1px -2px 5px rgba(256,256,256,0.3) ,
+ 1px 1px 5px rgba(256,256,256,0.3) ,
+ 1px 2px 5px rgba(256,256,256,0.3) inset;
+  transform-origin: 91px 11px;
+  transform-style: preserve-3d;
+  
+  animation:
+  rotate 3.84s infinite linear ,shodow 3.84s;
+  /* nudge  20s infinite linear ; */
+  animation-direction: normal;
+}
+
+/*venusOrbit*/
+.venusOrbit {
+  left:320px;
+  top:320px;
+  height: 160px;
+  width: 160px;
+  background-color: transparent;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: gray;
+  position: absolute;
+  border-width: 1px;
+  /*margin: 100px;*/
+  /*transform-origin: -75px -75px;*/
+  /*animation: rotate 4s infinite linear;*/
+  margin: 0px;
+  padding: 0px;
+  transform-style: preserve-3d;
+  z-index: 200px;
+}
+
+/*earth*/
+.earth {
+  left:266.5px;
+  top:391px;
+  height: 18px;
+  width: 18px;
+  z-index: 200px;
+  background: url(earth_3.jpg) repeat-x 0 0;
+  background-size: cover; 
+  
+  border-radius: 50%;
+  position: absolute;
+  box-shadow:-1px 1px 5px rgba(256,256,256,0.3)inset,
+  -1px -2px 5px rgba(256,256,256,0.3) ,
+  1px 1px 5px rgba(256,256,256,0.3) ,
+  1px 2px 5px rgba(256,256,256,0.3) inset;
+  transform-origin: 134px 9px;
+  transform-style: preserve-3d;
+  animation: rotate 6.25s infinite linear ,shodow 6.25s;
+}
+
+/*earthOrbit*/
+.earthOrbit {
+  left:275px;
+  top:275px;
+  height: 250px;
+  width: 250px;
+  background-color: transparent;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: gray;
+  position: absolute;
+  border-width: 1px;
+  /*margin: 100px;*/
+  /*transform-origin: -75px -75px;*/
+  /*animation: rotate 4s infinite linear;*/
+  margin: 0px;
+  padding: 0px;
+  transform-style: preserve-3d;
+  z-index: 200px;
+}
+
+/*mars*/
+.mars {
+  left:222.5px;
+  top:392.5px;
+  height: 15px;
+  width: 15px;
+  z-index: 200px;
+  background: url(mars_4huo.jpg) repeat-x 0 0;
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow:-1px 0 .1px rgba(256,256,256,0.3)inset,
+  -1px -1px .1px rgba(256,256,256,0.3) inset,
+  1px 0 .1px rgba(256,256,256,0.3) inset,
+  1px 1px .1px rgba(256,256,256,0.3) inset;
+  transform-origin: 177.5px 7.5px;
+  transform-style: preserve-3d;
+  animation: rotate 11.75s infinite linear ,shodow 11.75s;
+}
+
+/*marsOrbit*/
+.marsOrbit {
+  left:230px;
+  top:230px;
+  height: 340px;
+  width: 340px;
+  background-color: transparent;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: gray;
+  position: absolute;
+  border-width: 1px;
+  /*margin: 100px;*/
+  /*transform-origin: -75px -75px;*/
+  /*animation: rotate 4s infinite linear;*/
+  margin: 0px;
+  padding: 0px;
+  transform-style: preserve-3d;
+  z-index: 200px;
+}
+
+/*jupiter*/
+.jupiter {
+  left:134px;
+  top:379px;
+  height: 42px;
+  width: 42px;
+  z-index: 200px;
+  background: url(jupite_5muxing.jpg) ;
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow:-4px 0 5px rgba(256,256,256,0.3)inset,
+  -1px -2px 5px rgba(256,256,256,0.3) inset,
+  4px 0 5px rgba(256,256,256,0.3) inset,
+  1px 2px 5px rgba(256,256,256,0.3) inset;
+  
+  transform-origin: 266px 21px;
+  transform-style: preserve-3d;
+  animation: rotate 74.04s infinite linear ,shodow 74.04s;
+}
+
+/*jupiterOrbit*/
+.jupiterOrbit {
+  left:155px;
+  top:155px;
+  height: 490px;
+  width: 490px;
+  background-color: transparent;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: gray;
+  position: absolute;
+  z-index: 200px;
+  border-width: 1px;
+  /*margin: 100px;*/
+  /*transform-origin: -75px -75px;*/
+  /*animation: rotate 4s infinite linear;*/
+  margin: 0px;
+  padding: 0px;
+  transform-style: preserve-3d;
+}
+
+/*saturn*/
+.saturn {
+  left:92px;
+  top:387px;
+  height: 26px;
+  width: 26px;
+  z-index: 200px;
+  background:url(saturn_6tuxing.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+ box-shadow:-1px 1px 5px rgba(256,256,256,0.3)inset,
+ -1px -2px 5px rgba(256,256,256,0.3) ,
+ 1px 1px 5px rgba(256,256,256,0.3) ,
+ 1px 2px 5px rgba(256,256,256,0.3) inset;
+  transform-origin: 308px 13px;
+  transform-style: preserve-3d;
+  animation: rotate 183.92s infinite linear ,shodow 183.92s;
+}
+
+/*saturnOrbit*/
+.saturnOrbit {
+  left:105px;
+  top:105px;
+  height: 590px;
+  width: 590px;
+  background-color: transparent;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: gray;
+  position: absolute;
+  border-width: 1px;
+  /*margin: 100px;*/
+  /*transform-origin: -75px -75px;*/
+  /*animation: rotate 4s infinite linear;*/
+  margin: 0px;
+  padding: 0px;
+  transform-style: preserve-3d;
+  z-index: 200px;
+}
+
+/*uranus*/
+.uranus {
+  left:41.5px;
+  top:386.5px;
+  height: 27px;
+  width: 27px;
+  z-index: 200px;
+  background:url(neptune_8.jpg);
+  background-size:cover;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow:-4px 0 5px rgba(256,256,256,0.3)inset,
+  -1px -2px 5px rgba(256,256,256,0.3) inset,
+  4px 0 5px rgba(256,256,256,0.3) inset,
+  1px 2px 5px rgba(256,256,256,0.3) inset;
+  transform-origin: 358.5px 13.5px;
+  transform-style: preserve-3d;
+  animation: rotate 524.46s infinite linear ,shodow 524.46s;
+}
+
+/*uranusOrbit*/
+.uranusOrbit {
+  left:55px;
+  top:55px;
+  height: 690px;
+  width: 690px;
+  background-color: transparent;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: gray;
+  position: absolute;
+  border-width: 1px;
+  /*margin: 100px;*/
+  /*transform-origin: -75px -75px;*/
+  /*animation: rotate 4s infinite linear;*/
+  margin: 0px;
+  padding: 0px;
+  transform-style: preserve-3d;
+  z-index: 200px;
+}
+
+/*neptune*/
+.neptune {
+  left:10px;
+  top:390px;
+  height: 20px;
+  width: 20px;
+  z-index: 200px;
+  background:url(uranus_7tianwang.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+ box-shadow:-1px 1px 5px rgba(256,256,256,0.3)inset,
+ -1px -2px 5px rgba(256,256,256,0.3) ,
+ 1px 1px 5px rgba(256,256,256,0.3) ,
+ 1px 2px 5px rgba(256,256,256,0.3) inset;
+  transform-origin: 390px 10px;
+  transform-style: preserve-3d;
+  animation: rotate 1028.76s infinite linear,
+       shadow 1028.76s;
+}
+
+/*neptuneOrbit */
+.neptuneOrbit {
+  left:20px;
+  top:20px;
+  height: 760px;
+  width: 760px;
+  background-color: transparent;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: gray;
+  position: absolute;
+  border-width: 1px;
+  /*margin: 100px;*/
+  /*transform-origin: -75px -75px;*/
+  /*animation: rotate 4s infinite linear;*/
+  margin: 0px;
+  padding: 0px;
+  transform-style: preserve-3d;
+  z-index: 200px;
+}
+.pos {
+	position: absolute;
+	transform-style: preserve-3d;
+	animation-name: invert;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.mercury.pos{
+	animation-duration: 1.5s;
+}
+
+ @keyframes rotate {
+   0% { transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); }
+100% { transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg); }
+} 
+
+@keyframes shadow {
+			  0% {
+			    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+			    /* TOP */ }
+			
+			  25% {
+			    box-shadow: inset 16px 0 8px rgba(0, 0, 0, 0.5);
+			    /* LEFT */ }
+			
+			  50% {
+			    box-shadow: inset 40px -20px 16px rgba(0, 0, 0, 0.5);
+			    /* BOTTOM */ }
+			
+			  50.01% {
+			    box-shadow: inset -40px -20px 16px rgba(0, 0, 0, 0.5);
+			    /* BOTTOM */ }
+			
+			  75% {
+			    box-shadow: inset -16px 0 8px rgba(0, 0, 0, 0.5);
+			    /* RIGHT */ }
+			    
+			  100% {
+			    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+			    /* TOP */ }    
+			}
